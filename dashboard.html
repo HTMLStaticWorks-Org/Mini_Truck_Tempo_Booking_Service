@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="MoveFleet customer dashboard for vehicle bookings, trip tracking and billing.">
+  <title>Customer Dashboard | MoveFleet</title>
+  <link rel="icon" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="dashboard-body">
+
+<header class="navbar dash-navbar">
+  <div class="dash-navinner">
+    <div class="dash-nav-left">
+      <button class="dash-ham-toggle" data-sidebar-toggle aria-label="Toggle dashboard menu">☰</button>
+      <a class="brand" href="index.html">
+        <span aria-hidden="true" class="brand-mark">MF</span>
+        <span>MoveFleet<small>CUSTOMER PORTAL</small></span>
+      </a>
+    </div>
+
+    
+    <div class="nav-actions dash-nav-actions">
+      <button class="iconbtn theme-control" data-theme="" aria-label="Switch colour theme" title="Switch colour theme">◐</button>
+      <button class="iconbtn rtl-control" data-dir="" aria-label="Switch text direction" title="Switch text direction">↔</button>
+      <div class="dash-user-nav" data-open-tab="profile" role="button" tabindex="0" title="View Profile">
+        <div class="avatar">MF</div>
+        <div class="dash-user-info">
+          <strong class="dash-user-name">Guest Customer</strong>
+          <small class="dash-email">guest@example.com</small>
+        </div>
+      </div>
+      <button class="btn btn-outline dash-logout-btn" data-logout title="Sign out of MoveFleet">Logout</button>
+    </div>
+  </div>
+</header>
+
+<main class="dashboard">
+  <aside class="sidebar" id="customerSidebar">
+    <div class="side-mobile-head">
+      <a class="side-brand" href="index.html">
+        <span class="side-brand-mark">MF</span>
+        <span>MoveFleet<small>CUSTOMER PORTAL</small></span>
+      </a>
+      <button class="side-close-btn" data-sidebar-toggle aria-label="Close sidebar">✕</button>
+    </div>
+    <div class="side-label">WORKSPACE</div>
+    <button class="side-link active" data-dash-tab="overview">Overview</button>
+    <button class="side-link" data-dash-tab="bookings">My Bookings</button>
+    <button class="side-link" data-dash-tab="tracking">Track Trips</button>
+    <button class="side-link" data-dash-tab="billing">Billing &amp; Invoices</button>
+    <button class="side-link" data-dash-tab="profile">My Profile</button>
+    <div class="side-bottom">
+      <button data-logout class="side-link side-logout-btn">Logout</button>
+    </div>
+  </aside>
+
+  <section class="dash-main">
+    <header class="dash-top">
+      <div class="dash-heading">
+        <div>
+          <span class="dash-kicker">CUSTOMER WORKSPACE</span>
+          <h1 id="dashTitle">Dashboard Overview</h1>
+          <p id="dashSubtitle">Manage vehicle bookings, monitor trip progress and review billing.</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="dash-view active" data-dash-panel="overview">
+      <div class="dash-welcome">
+        <div>
+          <span>MOVEFLEET CUSTOMER PORTAL</span>
+          <h2>Your transport, all in one place.</h2>
+          <p>Review requests, follow trip updates and keep your invoices organized.</p>
+          <a class="btn btn-primary" href="index.html#quick-book">Create a booking</a>
+        </div>
+        <img src="assets/img/transport-photo-47.webp" alt="Cargo vehicle ready for local delivery">
+      </div>
+      <div class="dash-cards">
+        <div class="dash-stat">
+          <span>Total bookings</span>
+          <strong id="totalBookings">0</strong>
+          <small>All requests submitted</small>
+        </div>
+        <div class="dash-stat">
+          <span>Active trips</span>
+          <strong id="activeTrips">0</strong>
+          <small>Currently in progress</small>
+        </div>
+        <div class="dash-stat">
+          <span>Pending invoices</span>
+          <strong id="pendingInvoices">0</strong>
+          <small>Awaiting payment</small>
+        </div>
+        <div class="dash-stat">
+          <span>Completed trips</span>
+          <strong id="completedTrips">0</strong>
+          <small>Successfully delivered</small>
+        </div>
+      </div>
+      <div class="dash-columns">
+        <section class="dash-panel">
+          <div class="panel-heading">
+            <h2>Recent bookings</h2>
+            <button class="dash-text-btn" data-open-tab="bookings">View all</button>
+          </div>
+          <div data-booking-list><p class="empty">No bookings yet.</p></div>
+        </section>
+        <section class="dash-panel">
+          <div class="panel-heading"><h2>Quick actions</h2></div>
+          <a class="quick-action" href="index.html#quick-book">
+            <span>＋</span>
+            <div>
+              <strong>Book a vehicle</strong>
+              <small>Request a mini truck or tempo</small>
+            </div>
+          </a>
+          <button class="quick-action" data-open-tab="tracking">
+            <span>⌖</span>
+            <div>
+              <strong>Track a trip</strong>
+              <small>Check your booking status</small>
+            </div>
+          </button>
+          <button class="quick-action" data-open-tab="billing">
+            <span>▧</span>
+            <div>
+              <strong>View billing</strong>
+              <small>Review invoices and charges</small>
+            </div>
+          </button>
+        </section>
+      </div>
+    </section>
+
+    <section class="dash-view" data-dash-panel="bookings">
+      <div class="dash-actions">
+        <a class="btn btn-primary" href="index.html#quick-book">New Booking</a>
+        <a class="btn btn-outline" href="fleet.html">Browse Fleet</a>
+      </div>
+      <section class="dash-panel">
+        <div class="panel-heading">
+          <h2>All booking requests</h2>
+          <span class="panel-note">Saved booking requests</span>
+        </div>
+        <div data-all-bookings><p class="empty">No bookings found.</p></div>
+      </section>
+    </section>
+
+    <section class="dash-view" data-dash-panel="tracking">
+      <div class="dash-columns">
+        <section class="dash-panel">
+          <h2>Track your trip</h2>
+          <p class="panel-note">Enter your booking reference to see its latest status.</p>
+          <form id="trackForm">
+            <div class="field">
+              <label for="trackRef">Booking reference</label>
+              <input id="trackRef" placeholder="Example: MF1234567" required>
+            </div>
+            <button class="btn btn-blue" style="margin-top:14px">Track booking</button>
+            <div class="notice" id="trackResult"></div>
+          </form>
+        </section>
+        <section class="dash-panel">
+          <h2>Trip status guide</h2>
+          <div class="status-guide">
+            <div>
+              <b class="status-dot pending"></b>
+              <span><strong>Pending</strong><small>Request received, awaiting confirmation</small></span>
+            </div>
+            <div>
+              <b class="status-dot progress"></b>
+              <span><strong>In progress</strong><small>Vehicle assigned or trip underway</small></span>
+            </div>
+            <div>
+              <b class="status-dot done"></b>
+              <span><strong>Completed</strong><small>Delivery marked as completed</small></span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section class="dash-view" data-dash-panel="billing">
+      <section class="dash-panel">
+        <div class="panel-heading">
+          <h2>Billing &amp; invoices</h2>
+          <span class="panel-note">Invoice details for confirmed bookings</span>
+        </div>
+        <div class="billing-summary">
+          <div><span>Estimated charges</span><strong>Quote on request</strong></div>
+          <div><span>Payment records</span><strong>Not connected</strong></div>
+          <div><span>Outstanding</span><strong>Not available</strong></div>
+        </div>
+        <div class="table-wrap">
+          <table class="billing-table">
+            <thead>
+              <tr>
+                <th>Booking reference</th>
+                <th>Route</th>
+                <th>Vehicle</th>
+                <th>Booking date</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="billingRows">
+              <tr><td colspan="6">No billing records available yet.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+
+    <section class="dash-view" data-dash-panel="profile">
+      <section class="dash-panel profile-panel">
+        <h2>My profile</h2>
+        <div class="profile-row">
+          <span>Customer name</span>
+          <strong class="dash-user-name">Guest Customer</strong>
+        </div>
+        <div class="profile-row">
+          <span>Email address</span>
+          <strong class="dash-email">guest@example.com</strong>
+        </div>
+        <div class="profile-row">
+          <span>Account type</span>
+          <strong>Customer portal</strong>
+        </div>
+        <p class="panel-note">Profile editing becomes available after connecting the production account service.</p>
+      </section>
+    </section>
+
+    <p class="dash-disclaimer">Demo portal: bookings are stored in this browser only. Live GPS tracking, confirmed invoices, payment records and secure account data require backend integration.</p>
+  </section>
+</main>
+
+<script src="assets/js/app.js"></script>
+<script>
+(()=>{
+ const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+ const titles={overview:["Dashboard Overview","Manage vehicle bookings, monitor trip progress and review billing."],bookings:["My Bookings","View all your vehicle booking requests."],tracking:["Track Trips","Check the current status of a booking reference."],billing:["Billing & Invoices","Review invoice records and charges."],profile:["My Profile","Your customer account information."]};
+ const read=()=>{try{return JSON.parse(localStorage.getItem("mf-bookings")||"[]")}catch(e){return[]}};
+ const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+ function openTab(tab){$$("[data-dash-panel]").forEach(p=>p.classList.toggle("active",p.dataset.dashPanel===tab));$$("[data-dash-tab]").forEach(b=>b.classList.toggle("active",b.dataset.dashTab===tab));$("#dashTitle").textContent=titles[tab][0];$("#dashSubtitle").textContent=titles[tab][1];$("#customerSidebar")?.classList.remove("open")}
+ $$("[data-dash-tab]").forEach(b=>b.addEventListener("click",()=>openTab(b.dataset.dashTab)));
+ $$("[data-open-tab]").forEach(b=>b.addEventListener("click",()=>openTab(b.dataset.openTab)));
+ const data=read(), done=data.filter(x=>(x.status||"").toLowerCase()==="completed").length, active=data.filter(x=>(x.status||"").toLowerCase()==="in progress").length;
+ $("#totalBookings").textContent=data.length;$("#activeTrips").textContent=active;$("#completedTrips").textContent=done;$("#pendingInvoices").textContent=data.filter(x=>!x.invoicePaid).length;
+ const rows=data.map(b=>`<div class="booking-row"><div><strong>${esc(b.vehicle||"Vehicle booking")} · ${esc(b.from||"Pickup")} → ${esc(b.to||"Drop")}</strong><small>${esc(b.date||b.created||"")} · ${esc(b.id)}</small></div><span class="status">${esc(b.status||"Pending")}</span></div>`).join("");
+ $("[data-booking-list]").innerHTML=rows.slice(0,4)||'<p class="empty">No bookings yet. Create your first booking to see it here.</p>';
+ $("[data-all-bookings]").innerHTML=rows||'<p class="empty">No bookings found.</p>';
+ $("#billingRows").innerHTML=data.length?data.map(b=>`<tr><td>${esc(b.id)}</td><td>${esc(b.from||"—")} → ${esc(b.to||"—")}</td><td>${esc(b.vehicle||"—")}</td><td>${esc(b.date||b.created||"—")}</td><td>${esc(b.status||"Pending")}</td><td>Quote on request</td></tr>`).join(""):'<tr><td colspan="6">No billing records available yet.</td></tr>';
+ $("#trackForm").addEventListener("submit",e=>{e.preventDefault();const id=$("#trackRef").value.trim().toLowerCase(),b=data.find(x=>(x.id||"").toLowerCase()===id),n=$("#trackResult");n.textContent=b?`Booking ${b.id}: ${b.status||"Pending"} · ${b.from||"Pickup"} to ${b.to||"Drop"}`:"No matching booking found in this browser demo.";n.style.display="block"});
+ const user=(()=>{try{return JSON.parse(localStorage.getItem("mf-user")||"null")}catch(e){return null}})();
+ if(user){
+   $$(".dash-user-name").forEach(x=>x.textContent=user.name||"Customer");
+   $$(".dash-email").forEach(x=>x.textContent=user.email||"customer@example.com");
+   if(user.name){$$(".avatar").forEach(a=>a.textContent=(user.name.slice(0,2)).toUpperCase())}
+ }
+
+})();
+</script>
+</body>
+</html>
