@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="mfBadge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <!-- Brand Badge Squircle -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#mfBadge)"/>
+  
+  <!-- MoveFleet Truck Logo Graphic (Centered inside 64x64) -->
+  <g transform="translate(7, 10)">
+    <!-- Speed streaks -->
+    <path d="M4 14h6M2 20h9M4 26h6" stroke="#062e55" stroke-width="2.8" stroke-linecap="round"/>
+    
+    <!-- Cargo Box -->
+    <path d="M13 10.5h16a2 2 0 0 1 2 2V27H11.5a1.5 1.5 0 0 1-1.5-1.5v-13a2 2 0 0 1 2-2z" fill="#062e55"/>
+    <!-- Forward Chevron Accent -->
+    <path d="M18 15.5l5 4.5-5 4.5" stroke="#ffbf24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Cabin -->
+    <path d="M31 15h5a3 3 0 0 1 2.4 1.2l5 6.4a2 2 0 0 1 .6 1.4V27a1.5 1.5 0 0 1-1.5 1.5H31V15z" fill="#062e55"/>
+    <!-- Windshield -->
+    <path d="M33 17h3a1.5 1.5 0 0 1 1.2.6l3.4 4.4a.7.7 0 0 1-.5 1H33V17z" fill="#ffbf24"/>
+    
+    <!-- Headlight -->
+    <circle cx="43.5" cy="24.5" r="1.5" fill="#062e55"/>
+    
+    <!-- Wheels -->
+    <circle cx="16.5" cy="30.5" r="4.5" fill="#062e55"/>
+    <circle cx="16.5" cy="30.5" r="1.8" fill="#ffbf24"/>
+    <circle cx="36.5" cy="30.5" r="4.5" fill="#062e55"/>
+    <circle cx="36.5" cy="30.5" r="1.8" fill="#ffbf24"/>
+    
+    <!-- Road Track -->
+    <path d="M2 37h46" stroke="#062e55" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3.5 5"/>
+  </g>
+</svg>
