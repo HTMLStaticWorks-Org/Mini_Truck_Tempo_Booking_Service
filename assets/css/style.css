@@ -2450,8 +2450,102 @@ body.dark .rate-features-list li{color:#d5e2ef}
 }
 body.dark .rate-check{background:rgba(22,163,74,.2);color:#86efac}
 
-.rate-card-btn{margin-top:auto}
-.rate-card-btn .btn{width:100%;justify-content:center}
+.rate-card-btn{
+  margin-top:auto;
+  width:100%;
+}
+
+.rate-card-btn .btn,
+.rate-card-btn a.btn,
+.rate-card-btn .btn.btn-cube,
+.rate-card-btn .btn-outline,
+.rate-card-btn .btn-primary{
+  width:100%!important;
+  max-width:100%!important;
+  height:48px!important;
+  min-height:48px!important;
+  max-height:48px!important;
+  line-height:48px!important;
+  padding:0!important;
+  border:0 none transparent!important;
+  border-width:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  display:block!important;
+  box-sizing:border-box!important;
+}
+
+.rate-card-btn .btn .cube3d{
+  width:100%!important;
+  height:48px!important;
+  display:block!important;
+  box-sizing:border-box!important;
+}
+
+.rate-card-btn .btn .cube-face{
+  width:100%!important;
+  max-width:100%!important;
+  height:48px!important;
+  min-height:48px!important;
+  max-height:48px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-radius:10px!important;
+  font-family:'DM Sans',sans-serif!important;
+  font-weight:800!important;
+  font-size:14px!important;
+  padding:0 16px!important;
+  white-space:nowrap!important;
+  box-sizing:border-box!important;
+  text-align:center!important;
+}
+
+/* Card 1 & 3: Single clean border */
+.rate-card-btn .btn-outline .cube-front{
+  background:#ffffff!important;
+  color:#07539a!important;
+  border:1.5px solid #07539a!important;
+}
+.rate-card-btn .btn-outline .cube-back{
+  background:#07539a!important;
+  color:#ffffff!important;
+  border:1.5px solid #07539a!important;
+}
+body.dark .rate-card-btn .btn-outline .cube-front{
+  background:#1c3148!important;
+  color:#eaf4fc!important;
+  border:1.5px solid #4a6c8e!important;
+}
+body.dark .rate-card-btn .btn-outline .cube-back{
+  background:#ffbf24!important;
+  color:#08223c!important;
+  border:1.5px solid #ffbf24!important;
+}
+
+/* Card 2: Featured primary vibrant button matching exact height */
+.rate-card-btn .btn-primary .cube-front{
+  background:#ffbf24!important;
+  color:#08223c!important;
+  border:1.5px solid #e5a900!important;
+  box-shadow:0 4px 16px rgba(255,191,36,.28)!important;
+}
+.rate-card-btn .btn-primary .cube-back{
+  background:#07539a!important;
+  color:#ffffff!important;
+  border:1.5px solid #07539a!important;
+}
+body.dark .rate-card-btn .btn-primary .cube-front{
+  background:#ffbf24!important;
+  color:#08223c!important;
+  border:1.5px solid #ffbf24!important;
+  box-shadow:0 4px 18px rgba(255,191,36,.35)!important;
+}
+body.dark .rate-card-btn .btn-primary .cube-back{
+  background:#062e55!important;
+  color:#ffffff!important;
+  border:1.5px solid #062e55!important;
+}
 
 .rate-guarantee-banner{
   background:linear-gradient(135deg,#062e55 0%,#07539a 100%);
@@ -2524,11 +2618,38 @@ body.dark .rate-guarantee-banner{
   color:#07539a;
 }
 
-@media(max-width:960px){
-  .premium-rate-grid{grid-template-columns:1fr;gap:24px}
+/* Tablet Layout: 2 in row 1, 3rd card centered in row 2 with same size */
+@media(min-width: 641px) and (max-width: 992px){
+  .premium-rate-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr))!important;
+    gap: 24px!important;
+    justify-content: center!important;
+  }
+  .premium-rate-grid > .premium-rate-card:nth-child(3){
+    grid-column: 1 / -1!important;
+    width: 100%!important;
+    max-width: calc(50% - 12px)!important;
+    justify-self: center!important;
+  }
+}
+
+@media(max-width: 960px){
   .rate-guarantee-banner{grid-template-columns:1fr;gap:20px;padding:26px}
   .guarantee-action{width:100%}
   .guarantee-action .btn{width:100%}
+}
+
+@media(max-width: 640px){
+  .premium-rate-grid{
+    grid-template-columns: 1fr!important;
+    gap: 20px!important;
+  }
+  .premium-rate-grid > .premium-rate-card:nth-child(3){
+    grid-column: auto!important;
+    max-width: 100%!important;
+    width: 100%!important;
+    justify-self: stretch!important;
+  }
 }
 
 /* ==========================================================================
