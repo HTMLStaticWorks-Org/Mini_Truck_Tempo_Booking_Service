@@ -4527,3 +4527,35 @@ body.dark .booking-box input[type="date"]::-webkit-calendar-picker-indicator:hov
   }
 }
 
+/* ==========================================================================
+   MoveFleet Unique Brand Logo Graphic
+   ========================================================================== */
+.brand-mark,
+.side-brand-mark,
+.footer-brand .brand-mark {
+  display: grid !important;
+  place-items: center !important;
+}
+
+.brand-logo-svg {
+  width: 29px !important;
+  height: 26px !important;
+  display: block !important;
+  flex: none !important;
+  transition: transform .28s cubic-bezier(.34,1.56,.64,1) !important;
+}
+
+.brand:hover .brand-logo-svg,
+.side-brand:hover .brand-logo-svg,
+.footer-brand:hover .brand-logo-svg {
+  transform: scale(1.08) translateX(1px);
+}
+
+@media(max-width: 560px) {
+  .brand-logo-svg {
+    width: 24px !important;
+    height: 22px !important;
+  }
+}
+
+
