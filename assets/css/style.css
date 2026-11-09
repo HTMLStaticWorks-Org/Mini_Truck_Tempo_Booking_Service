@@ -557,10 +557,8 @@ body.dark .mobile-menu a{color:#f0f6fc}
 .nav-actions .iconbtn:focus-visible{outline:3px solid #ffbf24;outline-offset:3px}
 .nav-actions .btn{flex:0 0 auto;white-space:nowrap}
 body.dark .nav-actions .iconbtn{background:#24394d!important;color:#fff!important;border-color:#50677d!important}
-.theme-control{font-size:0!important}
-.theme-control:before{content:"◐"!important;font-size:22px!important;line-height:1!important}
-.rtl-control{font-size:0!important}
-.rtl-control:before{content:"⇄"!important;font-size:20px!important;line-height:1!important}
+.theme-control:before,.rtl-control:before,.nav-actions .theme-control:before,.nav-actions .rtl-control:before,.dash-nav-actions .theme-control:before,.dash-nav-actions .rtl-control:before,.dash-navbar .theme-control:before,.dash-navbar .rtl-control:before{display:none!important;content:none!important}
+.iconbtn.theme-control,.iconbtn.rtl-control,.nav-actions .iconbtn,.dash-nav-actions .iconbtn,.mobile-controls .iconbtn,.auth-tools .iconbtn{display:inline-flex!important;align-items:center!important;justify-content:center!important;text-align:center!important;font-size:18px!important;line-height:1!important}
 .mobile-controls{display:flex!important;gap:12px!important;align-items:center!important;justify-content:center!important;margin-top:12px!important;padding-top:14px!important;border-top:1px solid var(--line)!important}
 .mobile-controls .iconbtn{width:42px!important;height:42px!important;min-width:42px!important;max-width:42px!important;min-height:42px!important;max-height:42px!important;flex:0 0 42px!important;border-radius:50%!important;aspect-ratio:1/1!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;background:var(--surface)!important;border:1px solid var(--line)!important;color:var(--ink)!important;cursor:pointer!important;transition:transform .22s,background .22s,border-color .22s!important}
 .mobile-controls .iconbtn:hover{transform:translateY(-2px)!important;background:#07539a!important;color:#fff!important;border-color:#ffbf24!important}
@@ -1318,6 +1316,144 @@ body.dark .btn-blue .cube-back{
   background:#ffbf24!important;
   color:#10283e!important;
   border:1px solid #e5a900!important;
+}
+
+/* 1. Hero Buttons (Home 1) */
+.hero-btn-primary.btn-cube .cube-front,
+.hero-btn-primary .cube-front {
+  background: #ffbf24 !important;
+  color: #062e55 !important;
+  border: 1px solid #e5a900 !important;
+  box-shadow: 0 8px 22px rgba(255, 191, 36, 0.32) !important;
+}
+.hero-btn-primary.btn-cube .cube-back,
+.hero-btn-primary .cube-back {
+  background: #062e55 !important;
+  color: #ffffff !important;
+  border: 1px solid #062e55 !important;
+}
+
+.hero-btn-outline.btn-cube .cube-front,
+.hero-btn-outline .cube-front {
+  background: rgba(6, 46, 85, 0.35) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(4px) !important;
+}
+.hero-btn-outline.btn-cube .cube-back,
+.hero-btn-outline .cube-back {
+  background: #ffbf24 !important;
+  color: #062e55 !important;
+  border: 2px solid #e5a900 !important;
+}
+
+/* 2. Home 2 Buttons */
+.home2-btn-primary.btn-cube .cube-front,
+.home2-btn-primary .cube-front {
+  background: #ffbf24 !important;
+  color: #08223c !important;
+  border: 1px solid #e5a900 !important;
+  box-shadow: 0 8px 20px rgba(255, 191, 36, 0.32) !important;
+}
+.home2-btn-primary.btn-cube .cube-back,
+.home2-btn-primary .cube-back {
+  background: #062e55 !important;
+  color: #ffffff !important;
+  border: 1px solid #062e55 !important;
+}
+
+.home2-btn-secondary.btn-cube .cube-front,
+.home2-btn-secondary .cube-front {
+  background: #ffffff !important;
+  color: #08223c !important;
+  border: 2px solid #08223c !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08) !important;
+}
+.home2-btn-secondary.btn-cube .cube-back,
+.home2-btn-secondary .cube-back {
+  background: #062e55 !important;
+  color: #ffffff !important;
+  border: 2px solid #062e55 !important;
+}
+body.dark .home2-btn-secondary.btn-cube .cube-front,
+body.dark .home2-btn-secondary .cube-front {
+  background: #0f2840 !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+body.dark .home2-btn-secondary.btn-cube .cube-back,
+body.dark .home2-btn-secondary .cube-back {
+  background: #ffbf24 !important;
+  color: #08223c !important;
+  border-color: #e5a900 !important;
+}
+
+/* 3. Auth Submit CTA (Login & Signup) - 3D Rotate Style & 100% full width matching text boxes */
+.auth-submit.btn-cube,
+.auth-card .auth-submit.btn-cube,
+.auth-page .auth-submit.btn-cube {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  margin-top: 14px !important;
+  margin-bottom: 6px !important;
+  box-sizing: border-box !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  cursor: pointer !important;
+}
+.auth-submit.btn-cube .cube3d,
+.auth-card .auth-submit.btn-cube .cube3d,
+.auth-page .auth-submit.btn-cube .cube3d {
+  width: 100% !important;
+  display: block !important;
+}
+.auth-submit.btn-cube .cube-face,
+.auth-card .auth-submit.btn-cube .cube-face,
+.auth-page .auth-submit.btn-cube .cube-face {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  justify-content: center !important;
+  text-align: center !important;
+  border-radius: 10px !important;
+  font-family: 'Manrope', 'DM Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 15.5px !important;
+  padding: 0 20px !important;
+}
+.auth-submit.btn-cube .cube-front,
+.auth-card .auth-submit.btn-cube .cube-front,
+.auth-page .auth-submit.btn-cube .cube-front {
+  background: #07539a !important;
+  color: #ffffff !important;
+  border: 1px solid #07539a !important;
+  box-shadow: 0 4px 14px rgba(7, 83, 154, 0.25) !important;
+}
+.auth-submit.btn-cube .cube-back,
+.auth-card .auth-submit.btn-cube .cube-back,
+.auth-page .auth-submit.btn-cube .cube-back {
+  background: #ffbf24 !important;
+  color: #08223c !important;
+  border: 1px solid #e5a900 !important;
+}
+body.dark .auth-submit.btn-cube .cube-front,
+.auth-page.dark .auth-submit.btn-cube .cube-front,
+body.dark .auth-card .auth-submit.btn-cube .cube-front,
+.auth-page.dark .auth-card .auth-submit.btn-cube .cube-front {
+  background: #ffbf24 !important;
+  color: #08223c !important;
+  border: 1px solid #e5a900 !important;
+  box-shadow: 0 4px 18px rgba(255, 191, 36, 0.35) !important;
+}
+body.dark .auth-submit.btn-cube .cube-back,
+.auth-page.dark .auth-submit.btn-cube .cube-back,
+body.dark .auth-card .auth-submit.btn-cube .cube-back,
+.auth-page.dark .auth-card .auth-submit.btn-cube .cube-back {
+  background: #07539a !important;
+  color: #ffffff !important;
+  border: 1px solid #07539a !important;
 }
 
 /* Full-width block CTA rotating buttons */
@@ -3575,16 +3711,11 @@ body.dark .dash-navbar .iconbtn{
 }
 
 .dash-nav-actions .theme-control:before,
-.dash-navbar .theme-control:before{
-  content:"◐"!important;
-  font-size:20px!important;
-  line-height:1!important;
-}
+.dash-navbar .theme-control:before,
 .dash-nav-actions .rtl-control:before,
 .dash-navbar .rtl-control:before{
-  content:"⇄"!important;
-  font-size:18px!important;
-  line-height:1!important;
+  display:none!important;
+  content:none!important;
 }
 
 @media(max-width:600px){
@@ -3607,11 +3738,12 @@ body.dark .dash-navbar .iconbtn{
   .dash-nav-actions .rtl-control{
     display:inline-flex!important;
   }
-  .dash-nav-actions .theme-control:before{
-    font-size:17px!important;
-  }
-  .dash-nav-actions .rtl-control:before{
-    font-size:15px!important;
+  .dash-nav-actions .theme-control,
+  .dash-nav-actions .rtl-control{
+    font-size:16px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
   }
 }
 
