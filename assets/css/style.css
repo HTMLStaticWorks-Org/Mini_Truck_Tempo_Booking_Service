@@ -3685,7 +3685,8 @@ body.dark .hub-coverage-grid span{
   color:#eaf4fc!important;
   background:#123452!important;
   border:1px solid #42617e!important;
-  font-size:0!important;
+  font-size:20px!important;
+  font-weight:700!important;
   line-height:1!important;
   box-shadow:0 3px 10px rgba(0,0,0,.08)!important;
   transition:transform .25s,background .25s,border-color .25s!important;
